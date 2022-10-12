@@ -1,10 +1,11 @@
 package test
 
 import (
-	goroutintest "golang_demo/golang_study/goroutin_demo"
+	"golang_demo/golang_study/goroutin_exec"
 	"testing"
 )
 
 func TestGoroutin(t *testing.T) {
-	goroutintest.GoroutinPrint()
+	goroutin_exec.GoroutinPrint()
+	t.Log("---------end---------")
 }

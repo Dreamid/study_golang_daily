@@ -1,13 +1,8 @@
 package main
 
-import (
-	"fmt"
-	"golang_demo/golang_study/golang_strings"
-)
+import "golang_demo/golang_study/goroutin_exec"
 
 func main() {
-	// go golang_tcp.StartServer()
-	// golang_tcp.StartClient()
 
-	fmt.Println(golang_strings.IsUniqueString("helo"))
+	goroutin_exec.PrintCrosss()
 }

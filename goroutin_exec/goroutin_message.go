@@ -1,41 +1,42 @@
-package goroutintest
+package goroutin_exec
 
 import (
 	"fmt"
 	"sync"
 )
 
-func main() {
-	letter, number := make(chan bool), make(chan bool)
+func CrossPrint() {
+	number, letter := make(chan bool), make(chan bool)
 	wait := sync.WaitGroup{}
-
+	letters := "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 	go func() {
-		i := 1
+		i := 0
 		for {
-			select {
+			switch {
 			case <-number:
 				fmt.Print(i)
 				i++
+				fmt.Print(i)
 				letter <- true
-				break
 			default:
 				break
-			}
 
+			}
 		}
 	}()
 	wait.Add(1)
 	go func(wait *sync.WaitGroup) {
 		i := 0
-		str := "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 		for {
 			select {
 			case <-letter:
-				if i > len(str)-1 {
+				if i > len(letters)-1 {
 					wait.Done()
 					return
 				}
-				fmt.Print(str[i : i+1])
+				fmt.Print(letters[i : i+1])
+				i++
+				fmt.Print(letters[i : i+1])
 				i++
 				number <- true
 			default:
@@ -45,5 +46,6 @@ func main() {
 	}(&wait)
 	number <- true
 	wait.Wait()
-
+	fmt.Println()
+	fmt.Println("end")
 }

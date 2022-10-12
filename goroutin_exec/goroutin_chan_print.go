@@ -1,4 +1,4 @@
-package goroutintest
+package goroutin_exec
 
 import (
 	"fmt"
