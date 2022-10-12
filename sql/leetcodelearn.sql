@@ -22,4 +22,6 @@ from Activities
 group by sell_date
 order by sell_date asc
 
-# 3. 
+# 3. 删除重复数据中，保留id最小的数据。
+-- 表内连接，在email相同的情况下，删除id大的所有数据。
+delete p1 from Person p1 join  Person p2 on p1.email = p2.email and p1.id > p2.id
