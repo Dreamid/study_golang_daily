@@ -3,6 +3,7 @@ package november
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 	"testing"
 )
 
@@ -26,6 +27,6 @@ func TestJsonSlice(t *testing.T) {
 
 	jsonstr2 := `{"age":18,"name":"jack","child":[7,8,9,0,1,2,3,4]}`
 	json.Unmarshal([]byte(jsonstr2), &a)
-	fmt.Printf("aa=[%v],address=[%p]\n", aa, aa)
+	log.Printf("aa=[%v],address=[%p]\n", aa, aa)
 
 }

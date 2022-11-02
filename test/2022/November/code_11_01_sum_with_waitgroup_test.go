@@ -1,7 +1,7 @@
 package november
 
 import (
-	"fmt"
+	"log"
 	"sync"
 	"sync/atomic"
 	"testing"
@@ -22,5 +22,5 @@ func TestWaitGroup(t *testing.T) {
 		}(i)
 	}
 	wg.Wait()
-	fmt.Printf("total=[%v],suml=[%v]\n", total, sum)
+	log.Printf("total=[%v],suml=[%v]\n", total, sum)
 }
