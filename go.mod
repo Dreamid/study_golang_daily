@@ -1,3 +1,3 @@
 module golang_demo/golang_study
 
-go 1.16
+go 1.17

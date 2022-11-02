@@ -1,14 +1,14 @@
-package test
+package October
 
 import (
 	"fmt"
 	"testing"
 )
 
-//新类型
+// 新类型
 type MyInt1 int
 
-//别名
+// 别名
 type MyInt2 = int
 
 func TestTypeAlias(t *testing.T) {
