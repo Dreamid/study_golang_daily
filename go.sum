@@ -1,4 +1,4 @@
-github.com/robfig/cron v1.2.0 h1:ZjScXvvxeQ63Dbyxy76Fj3AT3Ut0aKsyd2/tl3DTMuQ=
-github.com/robfig/cron v1.2.0/go.mod h1:JGuDeoQd7Z6yL4zQhZ3OPEVHB7fL6Ka6skscFHfmt2k=
+github.com/fogleman/pt v0.0.0-20170619012416-6fa0015c2178 h1:4TnvdTCFXrGh+yjYmzMrrc9V0o29xB/J2pldpxDfUrg=
+github.com/fogleman/pt v0.0.0-20170619012416-6fa0015c2178/go.mod h1:7L0Ag5f6vgYY8ILH9R2Jbn0I4rShliILuSP0kXpxOFQ=
 github.com/robfig/cron/v3 v3.0.0 h1:kQ6Cb7aHOHTSzNVNEhmp8EcWKLb4CbiMW9h9VyIhO4E=
 github.com/robfig/cron/v3 v3.0.0/go.mod h1:eQICP3HwyT7UooqI/z+Ov+PtYAWygg1TEWWzGIFLtro=

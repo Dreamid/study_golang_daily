@@ -17,3 +17,31 @@ func TestSliceArray(t *testing.T) {
 	log.Printf("s1=[%v]", s1)
 
 }
+
+func TestChannel(t *testing.T) {
+
+	n := 10
+	channels := make([]chan int, n)
+	for i := 0; i < n; i++ {
+		channels[i] = make(chan int)
+		go func(i int, c1 chan int) {
+			log.Println(i)
+			c1 <- i
+		}(i, channels[i])
+	}
+
+	for _, c := range channels {
+		num := <-c
+		log.Printf("recive :[%v]", num)
+	}
+}
+
+func TestChannel1(t *testing.T) {
+
+	c1 := make(chan int)
+	go func(c1 chan int) {
+		c1 <- 1
+	}(c1)
+	num := <-c1
+	log.Printf("recive :[%v]", num)
+}
