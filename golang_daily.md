@@ -16,7 +16,7 @@
 
 # 新类型和别名 （新类型和int之间需要强制转换，别名与int之间不需要强制转换）
 type IntAlias = int  别名
-type NewInt 新类型
+type NewInt int 新类型
 
 var a1 IntAlias
 var a2 NewInt
