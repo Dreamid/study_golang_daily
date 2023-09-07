@@ -2,6 +2,7 @@ package September
 
 import (
 	"fmt"
+	"sort"
 	"testing"
 )
 
@@ -52,4 +53,30 @@ func Print(args ...string) {
 	for i, v := range args {
 		fmt.Printf("i = %v,v = %v\n", i, v)
 	}
+}
+
+func TestSortAndFind(t *testing.T) {
+
+	target := "golang"
+
+	src := []string{"hello", "Golang", "yes", "GO"}
+
+	ok := SortAndFind(target, src)
+	if ok {
+		t.Log("contains \n")
+		return
+	}
+	t.Log("not contains\n")
+
+}
+
+// sort.Strings() : 对字符串数组进行排序
+// sort.SearchStrings : 使用二分法在一个有序字符串数组中寻找目标字符串索引
+func SortAndFind(target string, src []string) bool {
+	sort.Strings(src)
+	index := sort.SearchStrings(src, target)
+	if index <= len(src) && src[index] == target {
+		return true
+	}
+	return false
 }
