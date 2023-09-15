@@ -80,3 +80,27 @@ func SortAndFind(target string, src []string) bool {
 	}
 	return false
 }
+
+type Student struct {
+	name string
+}
+
+func TestSliceAndList(t *testing.T) {
+
+	s1 := Student{"zhangsan"}
+
+	slice1 := make(map[string]Student)
+	slice2 := make(map[string]*Student)
+
+	fmt.Printf("%v\n", slice1)
+	fmt.Printf("%t\n", slice2)
+
+	slice1["s1"] = s1
+	slice2["s1"] = &s1
+
+	//Cannot assign to slice1["s1"].name
+	//slice1["s1"].name = "lisi"
+
+	slice2["s1"].name = "wangwu"
+
+}
