@@ -93,7 +93,7 @@ func TestSliceAndList(t *testing.T) {
 	slice2 := make(map[string]*Student)
 
 	fmt.Printf("%v\n", slice1)
-	fmt.Printf("%t\n", slice2)
+	fmt.Printf("%T\n", slice2)
 
 	slice1["s1"] = s1
 	slice2["s1"] = &s1
